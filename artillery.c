@@ -3,6 +3,7 @@
 #include <allegro5/allegro_image.h>
 #include <stdio.h>
 #include <stdlib.h>
+#include <stdbool.h>
 #include <math.h>
 
 #define PI 3.14159
@@ -118,7 +119,9 @@ void initGame()
 {
 	al_lock_bitmap(gMap, ALLEGRO_PIXEL_FORMAT_ANY, ALLEGRO_LOCK_WRITEONLY);
 	al_set_target_bitmap(gMap);
-	al_clear_to_color(al_map_rgba(0,0,0,0));
+	for(int x = 0; x < WIDTH; x++)
+		for(int y = 0; y < HEIGHT; y++)
+			al_put_pixel(x, y, al_map_rgba(0,0,0,0));
 
 	int x, y, h = 50 + rand() % 200;
 	float w = 50 + rand() % 100;
