@@ -1,5 +1,7 @@
 Artillery
 
+![image1](https://raw.githubusercontent.com/tdwsl/artillery/main/screenshot.png)
+
 ABOUT
 
 'Artillery' is, as the name suggests, an artillery game. To be more specific,
